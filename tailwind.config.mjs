@@ -60,7 +60,7 @@ export default {
   		},
 		backgroundImage: {
 			hero: 'url(/images/bg-hero-3.png)',
-			hero_shape:'url(/images/bg-hero-small.png)',
+			hero_shape:'url(/images/bg-hero-5.png)',
 			// hero_shape_big:'url(/images/bg-hero-big.png)'
 		}
   	}

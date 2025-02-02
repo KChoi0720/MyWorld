@@ -27,6 +27,9 @@ export default {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
+  			tertiary: {
+				DEFAULT: 'hsl(var(--tertiary))',
+			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
@@ -54,7 +57,12 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		backgroundImage: {
+			hero: 'url(/images/bg-hero-3.png)',
+			hero_shape:'url(/images/bg-hero-small.png)',
+			// hero_shape_big:'url(/images/bg-hero-big.png)'
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -66,9 +66,9 @@ const Hero = () => {
                     </div>
                 </div>
                 {/* icon */}
-                {/* <div className="hidden md:flex">
-                    <RiArrowDownSLine className='text-3xl text-primary' />
-                </div> */}
+                <div className="hidden md:flex">
+                    <RiArrowDownSLine className='text-3xl text-primary mx-auto' />
+                </div>
             </div>
         </section>
     );

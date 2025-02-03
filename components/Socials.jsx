@@ -45,7 +45,7 @@ const Socials = ({ containerStyles, iconsStyles }) => {
           </Link>
         )
       })}
-      Social
+      
     </div>
   )
 }

@@ -59,9 +59,11 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		backgroundImage: {
-			hero: 'url(/images/bg-hero-3.png)',
+			hero: 'url(/images/bg-4b9ea4.png)',
 			hero_shape:'url(/images/bg-hero-5.png)',
 			// hero_shape_big:'url(/images/bg-hero-big.png)'
+			dots_light:'url(/work/dot-light.svg)',
+			about_me:'url(/work/about-me.svg)',
 		}
   	}
   },

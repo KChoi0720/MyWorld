@@ -6,6 +6,7 @@ import {
     RiTeamFill,
     RiTodoFill,
     RiArrowDownSLine,
+    RiBriefcaseFill,
 } from 'react-icons/ri';
 
 // components
@@ -25,10 +26,10 @@ const Hero = () => {
                     {/* text */}
                     <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0
             text-center xl:text-left">
-                        <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
-                        <h1 className="h1">Hello, my name is Kevin</h1>
+                        <div className="text-1xl uppercase font-semibold mb-4 text-primary tracking-[4px]">Software Engineer</div>
+                        <h1 className="h1">Hello, I'm Kevin</h1>
                         <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                            Brief description with insights into myself
+                            I love Full-stack, Cloud, Data Analytics and Salesforce.
                         </p>
 
 
@@ -54,7 +55,7 @@ const Hero = () => {
                     {/* image */}
                     <div className="hidden xl:flex relative">
                         {/* badge 1 */}
-                        <Badge />
+                        {/* <Badge icon={<RiBriefcaseFill />} endCountNum={3} badgeText='Years of 3 Experiences'/> */}
 
                         <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] 
                         bg-no-repeat absolute -top-1 -right-2">

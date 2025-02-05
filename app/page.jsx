@@ -1,11 +1,16 @@
 // components
+import About from '@/components/About';
+import Hero from '@/components/Hero';
+import Work from '@/components/Work';
 
-import Hero from "@/components/Hero";
-import About from "@/components/About";
+
 
 export default function Home() {
-  return <main>
+  return (
+    <main>
       <Hero />
       <About />
-  </main>;
+      <Work />
+    </main>
+  );
 }

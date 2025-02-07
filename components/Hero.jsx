@@ -27,9 +27,9 @@ const Hero = () => {
                     <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0
             text-center xl:text-left">
                         <div className="text-1xl uppercase font-semibold mb-4 text-primary tracking-[4px]">Software Engineer</div>
-                        <h1 className="h1">Hello, I'm Kevin(Jiping) Cui</h1>
+                        <h1 className="h1">Hello, I'm Kevin</h1>
                         <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                            Cloud, SDE, DA, Salesforce.
+                            Cloud/Software/AI Engineer, DA, Salesforce Consultant.
                         </p>
                         {/* buttons */}
                         <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">

@@ -23,6 +23,16 @@ import {
     KeyIcon,
     TagsIcon,
     UsersIcon,
+    CaptionsIcon,
+    CigaretteIcon,
+    PersonStandingIcon,
+    PresentationIcon,
+    GitPullRequestIcon,
+    PersonStanding,
+    InfoIcon,
+    Info,
+    InfinityIcon,
+    BadgeInfo,
 } from 'lucide-react';
 
 const infoData = [
@@ -58,28 +68,33 @@ const qualificationData = [
         data: [
             {
                 company: "SAL Technologies - NZ",
-                role: "Software Engineer",
+                role: "Data Engineer",
                 years: "Oct.2024 - Jan.2015",
             },
             {
                 company: "GFK - An NIQ Company - NZ",
-                role: "Field Interviewer",
+                role: "Field Data Interviewer",
                 years: "May.2024 - Present",
             },
             {
-                company: "CBS Industry Group - China",
-                role: "Project Manager",
+                company: "CBS Group - China",
+                role: "Product Analyst",
                 years: "Mar.2017 - Apr.2024",
             },
             {
                 company: "CBS Industry Go.Ltd - China",
-                role: "Salesforce Administrator",
+                role: "Salesforce Consultant",
                 years: "Jun.2015 - Feb.2017",
             },
             {
-                company: "CBS Industry Group - China",
+                company: "DATANG Mobile - China",
                 role: "Junior Software Engineer",
                 years: "Jun.2014 - May.2015",
+            },
+            {
+                company: "CHINA Mobile - China",
+                role: "IT Technical Support",
+                years: "Sep.2012 - May.2014",
             },
         ]
     },
@@ -88,14 +103,14 @@ const qualificationData = [
         data: [
             {
                 university: "Unitec Institute of Technology",
-                qualification: "Master on Applied of Computubg Technology",
+                qualification: "Master on Applied of Computing Technology",
                 years: "2023 - 2024",
             },
-            {
-                university: "Yanbian University",
-                qualification: "Master on Computer Technology",
-                years: "2012 - 2014",
-            },
+            // {
+            //     university: "Yanbian University",
+            //     qualification: "Master on Computer Technology",
+            //     years: "2012 - 2014",
+            // },
             {
                 university: "Yanbian University",
                 qualification: "Bacherlor of Communication Engineering",
@@ -108,53 +123,37 @@ const qualificationData = [
 
 const certificationData = [
     {
-        icon: <CloudIcon size={20} />,
-        text: "AWS Certified Solution Architect Professional"
-    },
-    {
-        icon: <CloudIcon size={20} />,
-        text: "AWS Certified DevOps Professional"
-    },
-    {
-        icon: <CloudIcon size={20} />,
-        text: "AWS Certified Developer Associate"
-    },
-    {
-        icon: <CloudIcon size={20} />,
-        text: "AWS Certified Solution Architect Associate"
-    },
-    {
-        icon: <CloudIcon size={20} />,
-        text: "AWS Certified AI Practitioner"
-    },
-    {
-        icon: <ComputerIcon size={20} />,
-        text: "Microsoft Azure Solution Architect Expert"
-    },
-    {
-        icon: <ComputerIcon size={20} />,
-        text: "Microsoft Azure Administrator Associate"
-    },
-    {
-        icon: <ComputerIcon size={20} />,
-        text: "Microsoft Power BI Associate"
-    },  
-    {
-        icon: <UsersIcon size={20} />,
-        text: "Salesforce Certified Developer I"
-    },
-    {
-        icon: <UsersIcon size={20} />,
-        text: "Salesforce Certified Administrator"
-    },
-    {
-        icon: <UsersIcon size={20} />,
-        text: "Salesforce Certified AI Specialist"
-    },
-    {
-        icon: <UsersIcon size={20} />,
-        text: "Salesforce Certified AI Associate"
-    },  
+        title: "cert",
+        data: [
+            {
+                institue: "AWS",
+                name: [
+                    "Solution Architect Professional",
+                    "DevOps Professional",
+                    "Developer Associate",
+                    "Solution Architect Associate",
+                    "AI Practitioner",
+                ]
+            },
+            {
+                institue: "Microsoft",
+                name: [
+                    "Azure Solution Architect Expert",
+                    "Azure Administrator Associate",
+                    "Power BI Associate",
+                ]
+            },
+            {
+                institue: "Salesforce",
+                name: [
+                    "Developer I",
+                    "Administrator",
+                    "AI Specialist",
+                    "AI Associate",
+                ]
+            },
+        ]
+    }
 ]
 
 const skillData = [
@@ -202,9 +201,11 @@ const About = () => {
                         <Tabs defaultValue='personal'>
                             <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[300px] xl:border dark:border-none'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>
-                                    Personal Info
+                                    <InfoIcon size={28} className="mr-4" /> Personal Info
                                 </TabsTrigger>
-
+                                <h3 className='h3 mb-8 text-center xl:text-left'>
+                                    {/* My Education History */}
+                                </h3>
                                 {/* Tabs Content */}
                                 <TabsContent value='personal'>
                                     <div className='text-center xl:text-left'>
@@ -228,83 +229,22 @@ const About = () => {
                         </Tabs>
                     </div>
 
-                    {/* Experience */}
-                    <div className='flex-1'>
-                        <Tabs defaultValue='experience'>
-                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[300px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
-                                    Experience
-                                </TabsTrigger>
-                                {/* qualifications -> experience */}
-                                <TabsContent value='qualifications'>
-                                    <div>
-                                        <h3 className='h3 mb-8 text-center xl:text-left'>
-                                            My Awesome Journey
-                                        </h3>
-                                        {/* experience items */}
-                                        <div className='grid md:grid-cols-1 gap-y-8'>
-                                            <div className='flex flex-col gap-y-6'>
-                                                <div className='flex gap-x-4 items-center text-[22px] text-primary'>
-                                                    <Briefcase />
-                                                    <h4 className='capitalize font-medium'>
-                                                        {getData(qualificationData, 'experience').title}
-                                                    </h4>
-                                                </div>
-                                                {/* list */}
-                                                <div className='flex flex-col gap-y-3'>
-                                                    {getData(qualificationData, 'experience').data.map(
-                                                        (item, index) => {
-                                                            const { company, role, years } = item;
-                                                            return (
-                                                                <div className='flex gap-x-8 group' key={index}>
-                                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
-                                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] 
-                                                                        group-hover:translate-y-[84px] transition-all duration-500'></div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className='font-medium text-lg leading-none mb-2'>
-                                                                            {company}
-                                                                        </div>
-                                                                        <div className='text-base leading-none text-muted-foreground mb-2'>
-                                                                            {role}
-                                                                        </div>
-                                                                        <div className='text-sm font-medium'>
-                                                                            {years}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            );
-                                                        }
-                                                    )}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </TabsContent>
-                            </TabsList>
-                        </Tabs>
-                    </div>
-
                     {/* Education */}
                     <div className='flex-1'>
                         <Tabs defaultValue='education'>
                             <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[320px] xl:border dark:border-none'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
-                                    Education
+                                    <GraduationCap size={28} className="mr-4" /> Education
                                 </TabsTrigger>
+
+                                {/* qualifications -> education */}
                                 <TabsContent value='qualifications'>
-                                    <div>
+                                    <div className='text-center xl:text-left'>
                                         <h3 className='h3 mb-8 text-center xl:text-left'>
-                                            My Education History
+                                            {/* My Education History */}
                                         </h3>
                                         <div className='grid md:grid-cols-1 gap-y-8'>
                                             <div className='flex flex-col gap-y-6'>
-                                                <div className='flex gap-x-4 items-center text-[22px] text-primary'>
-                                                    <GraduationCap size={28} />
-                                                    <h4 className='capitalize font-medium'>
-                                                        {getData(qualificationData, 'education').title}
-                                                    </h4>
-                                                </div>
                                                 {/* list */}
                                                 <div className='flex flex-col gap-y-8'>
                                                     {getData(qualificationData, 'education').data.map(
@@ -341,30 +281,110 @@ const About = () => {
 
                     {/* Certifications */}
                     <div className='flex-1'>
-                        <Tabs defaultValue='certifications'>
-                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[580px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='certifications'>
-                                    Certifications
+                        <Tabs defaultValue='education'>
+                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[320px] xl:border dark:border-none'>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
+                                    <CreditCardIcon size={28} className="mr-4" /> Certifications
                                 </TabsTrigger>
-                            </TabsList>
-                            <TabsContent value='certifications'>
-                                <div className='text-center xl:text-left'>
-                                    {/* icons */}
-                                    <div className='grid xl:grid-cols-1 gap-4 mb-12'>
-                                        {certificationData.map((item, index) => (
-                                            <div
-                                                className='flex items-center gap-x-4 mx-auto xl:mx-0'
-                                                key={index}
-                                            >
-                                                <div className='text-primary'>{item.icon}</div>
-                                                <div>{item.text}</div>
+
+
+                                <TabsContent value='qualifications'>
+                                    <div className='text-center xl:text-left'>
+                                        <h3 className='h3 mb-8 text-center xl:text-left'>
+                                        </h3>
+                                        <div className='grid md:grid-cols-1 gap-y-8'>
+                                            <div className='flex flex-col gap-y-6'>
+                                                {/* list */}
+                                                <div className='flex flex-col gap-y-8'>
+                                                    {getData(certificationData, 'cert').data.map(
+                                                        (item, index) => {
+                                                            const { institue, name, date } = item;
+                                                            return (
+                                                                <div className='flex gap-x-8 group' key={index}>
+                                                                    <div className='w-[1px] bg-border relative ml-2'>
+                                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                                            {institue}
+                                                                        </div>
+                                                                        <div className='text-base leading-none text-muted-foreground mb-4 space-y-2'>
+                                                                            {name.map((cert, i) => (
+                                                                                <div key={i}>{cert}</div>  // each cert occupies one line
+                                                                            ))}
+                                                                        </div>
+                                                                        <div className='text-base font-medium'>
+                                                                            {date}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        }
+                                                    )}
+                                                </div>
                                             </div>
-                                        ))}
+                                        </div>
                                     </div>
-                                </div>
-                            </TabsContent>
+                                </TabsContent>
+                            </TabsList>
                         </Tabs>
                     </div>
+
+
+                    {/* Experience */}
+                    <div className='flex-1'>
+                        <Tabs defaultValue='experience'>
+                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[300px] xl:border dark:border-none'>
+                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
+                                    <Briefcase size={28} className="mr-4" /> Experience
+                                </TabsTrigger>
+
+                                {/* qualifications -> experience */}
+                                <TabsContent value='qualifications'>
+                                    <div>
+                                        <h3 className='h3 mb-8 text-center xl:text-left'>
+                                            {/* My Work Journey */}
+                                        </h3>
+                                        {/* experience items */}
+                                        <div className='grid md:grid-cols-1 gap-y-8'>
+                                            <div className='flex flex-col gap-y-6'>
+                                                {/* list */}
+                                                <div className='flex flex-col gap-y-3'>
+                                                    {getData(qualificationData, 'experience').data.map(
+                                                        (item, index) => {
+                                                            const { company, role, years } = item;
+                                                            return (
+                                                                <div className='flex gap-x-8 group' key={index}>
+                                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] 
+                                                                        group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                                            {company}
+                                                                        </div>
+                                                                        <div className='text-base leading-none text-muted-foreground mb-2 space-y-2'>
+                                                                            {role}
+                                                                        </div>
+                                                                        <div className='text-sm font-medium'>
+                                                                            {years}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        }
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </TabsContent>
+                            </TabsList>
+                        </Tabs>
+                    </div>
+
+
                 </div >
             </div>
         </section >

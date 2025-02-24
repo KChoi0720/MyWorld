@@ -11,6 +11,18 @@ import {
     Calendar,
     Briefcase,
     CreditCardIcon,
+    SunIcon,
+    CloudIcon,
+    WorkflowIcon,
+    FlagIcon,
+    AlbumIcon,
+    ServerIcon,
+    ComputerIcon,
+    Icon,
+    CopyMinusIcon,
+    KeyIcon,
+    TagsIcon,
+    UsersIcon,
 } from 'lucide-react';
 
 const infoData = [
@@ -96,54 +108,54 @@ const qualificationData = [
 
 const certificationData = [
     {
-        icon: <CreditCardIcon size={20} />,
-        text: "SAP - AWS Certified Solution Architect Professional"
+        icon: <CloudIcon size={20} />,
+        text: "AWS Certified Solution Architect Professional"
     },
     {
-        icon: <MailIcon size={20} />,
-        text: "DVP: AWS Certified DevOps Professional"
+        icon: <CloudIcon size={20} />,
+        text: "AWS Certified DevOps Professional"
     },
     {
-        icon: <HomeIcon size={20} />,
-        text: "DVA: AWS Certified Developer Associate"
+        icon: <CloudIcon size={20} />,
+        text: "AWS Certified Developer Associate"
     },
     {
-        icon: <PhoneCall size={20} />,
-        text: "SAA: AWS Certified Solution Architect Associate"
+        icon: <CloudIcon size={20} />,
+        text: "AWS Certified Solution Architect Associate"
     },
     {
-        icon: <GraduationCap size={20} />,
-        text: "CLP: AWS Certified Cloud Practitioner'"
+        icon: <CloudIcon size={20} />,
+        text: "AWS Certified AI Practitioner"
     },
     {
-        icon: <Calendar size={20} />,
-        text: "CAP: AWS Certified AI Practitioner"
+        icon: <ComputerIcon size={20} />,
+        text: "Microsoft Azure Solution Architect Expert"
     },
+    {
+        icon: <ComputerIcon size={20} />,
+        text: "Microsoft Azure Administrator Associate"
+    },
+    {
+        icon: <ComputerIcon size={20} />,
+        text: "Microsoft Power BI Associate"
+    },  
+    {
+        icon: <UsersIcon size={20} />,
+        text: "Salesforce Certified Developer I"
+    },
+    {
+        icon: <UsersIcon size={20} />,
+        text: "Salesforce Certified Administrator"
+    },
+    {
+        icon: <UsersIcon size={20} />,
+        text: "Salesforce Certified AI Specialist"
+    },
+    {
+        icon: <UsersIcon size={20} />,
+        text: "Salesforce Certified AI Associate"
+    },  
 ]
-// const certificationData = [
-//     {
-//         title: 'certifications',
-//         data: [
-//             { name: 'SAP: AWS Certified Solution Architect Professional' },
-//             { name: 'DVP: AWS Certified DevOps Professional' },
-//             { name: 'DVA: AWS Certified Developer Associate' },
-//             { name: 'SAA: AWS Certified Solution Architect Associate' },
-//             { name: 'CLP: AWS Certified Cloud Practitioner' },
-//             { name: 'CAP: AWS Certified AI Practitioner' }
-//         ],
-//     },
-
-//     {
-//         title: 'icons',
-//         data: [
-//             { imgPath: '/about/vscode.svg' },
-//             { imgPath: '/about/figma.svg' },
-//             { imgPath: '/about/github.svg' },
-//             { imgPath: '/about/wordpress.svg' },
-
-//         ],
-//     },
-// ]
 
 const skillData = [
     {
@@ -192,27 +204,27 @@ const About = () => {
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>
                                     Personal Info
                                 </TabsTrigger>
-                            </TabsList>
 
-                            {/* Tabs Content */}
-                            <TabsContent value='personal'>
-                                <div className='text-center xl:text-left'>
-                                    {/* icons */}
-                                    <div className='grid xl:grid-cols-1 gap-4 mb-12'>
-                                        {infoData.map((item, index) => {
-                                            return (
-                                                <div
-                                                    className='flex items-center gap-x-4 mx-auto xl:mx-0'
-                                                    key={index}
-                                                >
-                                                    <div className='text-primary'>{item.icon}</div>
-                                                    <div>{item.text}</div>
-                                                </div>
-                                            );
-                                        })}
+                                {/* Tabs Content */}
+                                <TabsContent value='personal'>
+                                    <div className='text-center xl:text-left'>
+                                        {/* icons */}
+                                        <div className='grid xl:grid-cols-1 gap-4 mb-12'>
+                                            {infoData.map((item, index) => {
+                                                return (
+                                                    <div
+                                                        className='flex items-center gap-x-4 mx-auto xl:mx-0'
+                                                        key={index}
+                                                    >
+                                                        <div className='text-primary'>{item.icon}</div>
+                                                        <div>{item.text}</div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
                                     </div>
-                                </div>
-                            </TabsContent>
+                                </TabsContent>
+                            </TabsList>
                         </Tabs>
                     </div>
 
@@ -329,27 +341,25 @@ const About = () => {
 
                     {/* Certifications */}
                     <div className='flex-1'>
-                        <Tabs defaultValue='certification'>
+                        <Tabs defaultValue='certifications'>
                             <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[580px] xl:border dark:border-none'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='certifications'>
                                     Certifications
                                 </TabsTrigger>
                             </TabsList>
-                            <TabsContent value='personal'>
+                            <TabsContent value='certifications'>
                                 <div className='text-center xl:text-left'>
                                     {/* icons */}
                                     <div className='grid xl:grid-cols-1 gap-4 mb-12'>
-                                        {infoData.map((item, index) => {
-                                            return (
-                                                <div
-                                                    className='flex items-center gap-x-4 mx-auto xl:mx-0'
-                                                    key={index}
-                                                >
-                                                    <div className='text-primary'>{item.icon}</div>
-                                                    <div>{item.text}</div>
-                                                </div>
-                                            );
-                                        })}
+                                        {certificationData.map((item, index) => (
+                                            <div
+                                                className='flex items-center gap-x-4 mx-auto xl:mx-0'
+                                                key={index}
+                                            >
+                                                <div className='text-primary'>{item.icon}</div>
+                                                <div>{item.text}</div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </TabsContent>

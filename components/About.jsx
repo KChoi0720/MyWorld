@@ -56,10 +56,10 @@ const infoData = [
         icon: <GraduationCap size={20} />,
         text: "Master on Computer Science"
     },
-    // {
-    //     icon: <Calendar size={20} />,
-    //     text: "Born on 20 Jul, 1990"
-    // },
+    {
+        icon: <Calendar size={20} />,
+        text: "  HTML, Tailwind CSS, React.js, TypeScript, JavaScript, Node.js, MongoDB, MySQL, PostgreSQL, Git, GitHub, Docker, Kubernetes, AWS, Azure, Salesforce, Power BI, Tableau, Python, Java."
+    },
 ]
 
 const qualificationData = [
@@ -104,6 +104,7 @@ const qualificationData = [
             {
                 university: "Unitec Institute of Technology",
                 qualification: "Master on Applied of Computing Technology",
+                country:"New Zealand",
                 years: "2023 - 2024",
             },
             // {
@@ -114,6 +115,7 @@ const qualificationData = [
             {
                 university: "Yanbian University",
                 qualification: "Bacherlor of Communication Engineering",
+                country:"China",
                 years: "2008 - 2012",
             },
         ]
@@ -156,30 +158,6 @@ const certificationData = [
     }
 ]
 
-const skillData = [
-    {
-        title: 'skills',
-        data: [
-            { name: 'HTML, React.js, Tailwind CSS, TypeScript' },
-            { name: 'Python, Node.js' },
-            { name: 'Git, GitHub, GitHub Actions' },
-            { name: 'SQL, MongoDB, MySQL, PostgreSQL' },
-            { name: 'Docker, Kubernetes, Terraform AWS, Azure' },
-            { name: 'Salesforce, Apex, Visualforce, Lightning' }
-        ],
-    },
-
-    {
-        title: 'tools',
-        data: [
-            { imgPath: '/about/vscode.svg' },
-            { imgPath: '/about/figma.svg' },
-            { imgPath: '/about/github.svg' },
-            { imgPath: '/about/wordpress.svg' },
-
-        ],
-    },
-]
 
 
 const About = () => {
@@ -194,21 +172,18 @@ const About = () => {
                     About me
                 </h2>
 
-                {/* Wrapper: Personal Info & Experience */}
-                <div className='flex flex-col xl:flex-row gap-1'>
+                {/* Wrapper: Personal Info, education, certifications Experience */}
+                <div className='flex flex-col xl:flex-row gap-4 items-center xl:items-stretch justify-center'>
 
                     {/* Personal Info */}
-                    <div className='flex-1 '>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Personal Info</h3>
+                    <div className='flex-1'>
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Personal Info</h3>
                         <div className='text-center xl:text-left '>
                             {/* icons */}
-                            <div className='grid xl:grid-cols-1 gap-4 mb-12'>
+                            <div className='grid xl:grid-cols-1 gap-4 mb-12 w-[300px]'>
                                 {infoData.map((item, index) => {
                                     return (
-                                        <div
-                                            className='flex items-center gap-x-4 mx-auto xl:mx-0'
-                                            key={index}
-                                        >
+                                        <div className='flex items-start gap-x-4 mx-auto xl:mx-0' key={index}>
                                             <div className='text-primary'>{item.icon}</div>
                                             <div>{item.text}</div>
                                         </div>
@@ -220,14 +195,14 @@ const About = () => {
 
                     {/* Education */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Education</h3>
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Education</h3>
                         <div className='w-[300px] grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
                                 <div className='flex flex-col gap-y-8'>
                                     {getData(qualificationData, 'education').data.map(
                                         (item, index) => {
-                                            const { university, qualification, years } = item;
+                                            const { university, qualification, country, years } = item;
                                             return (
                                                 <div className='flex gap-x-8 group' key={index}>
                                                     <div className='h-[84px] w-[1px] bg-border relative ml-2'>
@@ -239,6 +214,9 @@ const About = () => {
                                                         </div>
                                                         <div className='text-base leading-none text-muted-foreground mb-4'>
                                                             {qualification}
+                                                        </div>
+                                                        <div className='text-base font-medium'>
+                                                            {country}
                                                         </div>
                                                         <div className='text-base font-medium'>
                                                             {years}
@@ -255,7 +233,7 @@ const About = () => {
 
                     {/* Certifications */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Certifications</h3>
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Certifications</h3>
                         <div className='grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
@@ -266,13 +244,13 @@ const About = () => {
                                             return (
                                                 <div className='flex gap-x-8 group' key={index}>
                                                     <div className='w-[1px] bg-border relative ml-2'>
-                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[100px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
                                                         <div className='font-medium text-lg leading-none mb-2'>
                                                             {institue}
                                                         </div>
-                                                        <div className='text-base leading-none text-muted-foreground mb-4 space-y-2'>
+                                                        <div className='text-base leading-none text-muted-foreground mb-4 space-y-2 '>
                                                             {name.map((cert, i) => (
                                                                 <div key={i}>{cert}</div>  // each cert occupies one line
                                                             ))}
@@ -292,7 +270,7 @@ const About = () => {
 
                     {/* Experience */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Experience</h3>
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Experience</h3>
                         <div className='grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
@@ -308,10 +286,10 @@ const About = () => {
                                                     </div>
                                                     <div>
                                                         <div className='font-medium text-lg leading-none mb-2'>
-                                                            {company}
+                                                            {role}
                                                         </div>
                                                         <div className='text-base leading-none text-muted-foreground mb-2 space-y-2'>
-                                                            {role}
+                                                            {company}
                                                         </div>
                                                         <div className='text-sm font-medium'>
                                                             {years}

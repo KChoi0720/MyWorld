@@ -29,8 +29,9 @@ const Hero = () => {
                         <div className="text-1xl uppercase font-semibold mb-4 text-primary tracking-[4px]">Software Engineer</div>
                         <h1 className="h1">Hello, I'm Kevin</h1>
                         <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                            Cloud/Software/AI Engineer, DA, Salesforce Consultant.
+                            Cloud/Software/AI Engineer, DA/DE, Salesforce Consultant.
                         </p>
+                        
                         {/* buttons */}
                         <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                             <Link href='/contact'>
@@ -44,6 +45,7 @@ const Hero = () => {
                                 <Download size={18} />
                             </Button>
                         </div>
+
                         {/* Socials */}
                         <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0'
                             iconsStyles='text-foreground text-[22px] hover:text-primary

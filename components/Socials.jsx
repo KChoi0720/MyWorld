@@ -12,20 +12,20 @@ import Link from "next/link"
 
 
 const icons = [
+  // {
+  //   path: "/",
+  //   name: <RiYoutubeFill />,
+  // },
   {
-    path: "/",
-    name: <RiYoutubeFill />,
-  },
-  {
-    path: "/",
+    path: "https://www.linkedin.com/in/kevinchoi0720/",
     name: <RiLinkedinFill />,
   },
   {
-    path: "/",
+    path: "https://github.com/KChoi0720",
     name: <RiGithubFill />,
   },
   {
-    path: "/",
+    path: "https://www.facebook.com/profile.php?id=61550291334347",
     name: <RiFacebookBoxFill />,
   },
   {

@@ -17,7 +17,7 @@ const Contact = () => {
               Welcome Sincerely
             </div>
             <h1 className='h1 max-w-md mb-8'>I believe I can do</h1>
-            <p className='subtitle max-w-[400px]'>
+            <div className='subtitle max-w-[400px]'>
               <Tabs>
               <TabsList>
               <span>&gt;&gt; </span>  I never stop studying and learning new things.
@@ -26,7 +26,7 @@ const Contact = () => {
               <span>&gt;&gt; </span>  So let's see what we can achieve together.
               </TabsList>
               </Tabs>
-            </p>
+            </div>
           </div>
           {/* illustration */}
           <div className='hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat'></div>

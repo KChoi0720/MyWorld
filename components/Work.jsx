@@ -18,33 +18,15 @@ import ProjectCard from '@/components/ProjectCard';
 const projectData = [
   {
     image: '/work/holzer1.jpg',
-    category: 'Website',
+    category: 'Development',
     name: 'Holzer Website',
     description:
-      'Participated in developing Holzer website, achieved responsive features and multiple interactive functions.',
+      'Achieved in Holzer web responsive and interactive functions.',
     link: 'http://www.holzer.com.cn/',
     // github: '/',
   },
   {
-    image: '/work/4.png',
-    category: 'Azure',
-    name: 'Solstice Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/2.png',
-    category: 'Salesforce',
-    name: 'Custom Features',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/1.png',
+    image: '/work/powerbi.jpg',
     category: 'Data Analytics',
     name: 'Sales Analysis and Prediction',
     description:
@@ -52,51 +34,17 @@ const projectData = [
     link: '/',
     github: '/',
   },
-  {
-    image: '/work/3.png',
-    category: 'next js',
-    name: 'Ignite Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/4.png',
-    category: 'next js',
-    name: 'Envision Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
-  },
+
   {
     image: '/work/1.png',
-    category: 'fullstack',
-    name: 'Serenity Website',
+    category: 'Salesforce',
+    name: 'Salesforce with Kafka',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
+      'Achieve real-time data ETL with Salesforce',
     link: '/',
     github: '/',
   },
-  {
-    image: '/work/3.png',
-    category: 'fullstack',
-    name: 'Nova Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: '/work/2.png',
-    category: 'fullstack',
-    name: 'Zenith Website',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
-  },
+
 ];
 
 

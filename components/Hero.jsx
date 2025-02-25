@@ -19,7 +19,7 @@ import react from "react"
 
 const Hero = () => {
     return (
-        <section className="py-12 xl:py-24 h-[60vh] xl:pt-28 bg-hero bg-no-repeat 
+        <section className="py-12 xl:py-24 h-[53vh] xl:pt-14 bg-hero bg-no-repeat 
   bg-bottom bg-cover dark:bg-none">
             <div className="container mx-auto">
                 <div className="flex justify-between gap-x-8">

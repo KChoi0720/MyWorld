@@ -181,6 +181,7 @@ const skillData = [
     },
 ]
 
+
 const About = () => {
     const getData = (arr, title) => {
         return arr.find((item) => item.title === title);
@@ -197,199 +198,139 @@ const About = () => {
                 <div className='flex flex-col xl:flex-row gap-1'>
 
                     {/* Personal Info */}
-                    <div className='flex-1'>
-                        <Tabs defaultValue='personal'>
-                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[300px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>
-                                    <InfoIcon size={28} className="mr-4" /> Personal Info
-                                </TabsTrigger>
-                                <h3 className='h3 mb-8 text-center xl:text-left'>
-                                    {/* My Education History */}
-                                </h3>
-                                {/* Tabs Content */}
-                                <TabsContent value='personal'>
-                                    <div className='text-center xl:text-left'>
-                                        {/* icons */}
-                                        <div className='grid xl:grid-cols-1 gap-4 mb-12'>
-                                            {infoData.map((item, index) => {
-                                                return (
-                                                    <div
-                                                        className='flex items-center gap-x-4 mx-auto xl:mx-0'
-                                                        key={index}
-                                                    >
-                                                        <div className='text-primary'>{item.icon}</div>
-                                                        <div>{item.text}</div>
-                                                    </div>
-                                                );
-                                            })}
+                    <div className='flex-1 '>
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Personal Info</h3>
+                        <div className='text-center xl:text-left '>
+                            {/* icons */}
+                            <div className='grid xl:grid-cols-1 gap-4 mb-12'>
+                                {infoData.map((item, index) => {
+                                    return (
+                                        <div
+                                            className='flex items-center gap-x-4 mx-auto xl:mx-0'
+                                            key={index}
+                                        >
+                                            <div className='text-primary'>{item.icon}</div>
+                                            <div>{item.text}</div>
                                         </div>
-                                    </div>
-                                </TabsContent>
-                            </TabsList>
-                        </Tabs>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </div>
 
                     {/* Education */}
                     <div className='flex-1'>
-                        <Tabs defaultValue='education'>
-                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[320px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
-                                    <GraduationCap size={28} className="mr-4" /> Education
-                                </TabsTrigger>
-
-                                {/* qualifications -> education */}
-                                <TabsContent value='qualifications'>
-                                    <div className='text-center xl:text-left'>
-                                        <h3 className='h3 mb-8 text-center xl:text-left'>
-                                            {/* My Education History */}
-                                        </h3>
-                                        <div className='grid md:grid-cols-1 gap-y-8'>
-                                            <div className='flex flex-col gap-y-6'>
-                                                {/* list */}
-                                                <div className='flex flex-col gap-y-8'>
-                                                    {getData(qualificationData, 'education').data.map(
-                                                        (item, index) => {
-                                                            const { university, qualification, years } = item;
-                                                            return (
-                                                                <div className='flex gap-x-8 group' key={index}>
-                                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
-                                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className='font-medium text-lg leading-none mb-2'>
-                                                                            {university}
-                                                                        </div>
-                                                                        <div className='text-base leading-none text-muted-foreground mb-4'>
-                                                                            {qualification}
-                                                                        </div>
-                                                                        <div className='text-base font-medium'>
-                                                                            {years}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            );
-                                                        }
-                                                    )}
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Education</h3>
+                        <div className='w-[300px] grid md:grid-cols-1 gap-y-8'>
+                            <div className='flex flex-col gap-y-6'>
+                                {/* list */}
+                                <div className='flex flex-col gap-y-8'>
+                                    {getData(qualificationData, 'education').data.map(
+                                        (item, index) => {
+                                            const { university, qualification, years } = item;
+                                            return (
+                                                <div className='flex gap-x-8 group' key={index}>
+                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                    </div>
+                                                    <div>
+                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                            {university}
+                                                        </div>
+                                                        <div className='text-base leading-none text-muted-foreground mb-4'>
+                                                            {qualification}
+                                                        </div>
+                                                        <div className='text-base font-medium'>
+                                                            {years}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </TabsContent>
-                            </TabsList>
-                        </Tabs>
+                                            );
+                                        }
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Certifications */}
                     <div className='flex-1'>
-                        <Tabs defaultValue='education'>
-                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[320px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
-                                    <CreditCardIcon size={28} className="mr-4" /> Certifications
-                                </TabsTrigger>
-
-
-                                <TabsContent value='qualifications'>
-                                    <div className='text-center xl:text-left'>
-                                        <h3 className='h3 mb-8 text-center xl:text-left'>
-                                        </h3>
-                                        <div className='grid md:grid-cols-1 gap-y-8'>
-                                            <div className='flex flex-col gap-y-6'>
-                                                {/* list */}
-                                                <div className='flex flex-col gap-y-8'>
-                                                    {getData(certificationData, 'cert').data.map(
-                                                        (item, index) => {
-                                                            const { institue, name, date } = item;
-                                                            return (
-                                                                <div className='flex gap-x-8 group' key={index}>
-                                                                    <div className='w-[1px] bg-border relative ml-2'>
-                                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className='font-medium text-lg leading-none mb-2'>
-                                                                            {institue}
-                                                                        </div>
-                                                                        <div className='text-base leading-none text-muted-foreground mb-4 space-y-2'>
-                                                                            {name.map((cert, i) => (
-                                                                                <div key={i}>{cert}</div>  // each cert occupies one line
-                                                                            ))}
-                                                                        </div>
-                                                                        <div className='text-base font-medium'>
-                                                                            {date}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            );
-                                                        }
-                                                    )}
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Certifications</h3>
+                        <div className='grid md:grid-cols-1 gap-y-8'>
+                            <div className='flex flex-col gap-y-6'>
+                                {/* list */}
+                                <div className='flex flex-col gap-y-8'>
+                                    {getData(certificationData, 'cert').data.map(
+                                        (item, index) => {
+                                            const { institue, name, date } = item;
+                                            return (
+                                                <div className='flex gap-x-8 group' key={index}>
+                                                    <div className='w-[1px] bg-border relative ml-2'>
+                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                    </div>
+                                                    <div>
+                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                            {institue}
+                                                        </div>
+                                                        <div className='text-base leading-none text-muted-foreground mb-4 space-y-2'>
+                                                            {name.map((cert, i) => (
+                                                                <div key={i}>{cert}</div>  // each cert occupies one line
+                                                            ))}
+                                                        </div>
+                                                        <div className='text-base font-medium'>
+                                                            {date}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </TabsContent>
-                            </TabsList>
-                        </Tabs>
+                                            );
+                                        }
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
 
                     {/* Experience */}
                     <div className='flex-1'>
-                        <Tabs defaultValue='experience'>
-                            <TabsList className='w-full grid xl:grid-cols-1 xl:max-w-[300px] xl:border dark:border-none'>
-                                <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>
-                                    <Briefcase size={28} className="mr-4" /> Experience
-                                </TabsTrigger>
-
-                                {/* qualifications -> experience */}
-                                <TabsContent value='qualifications'>
-                                    <div>
-                                        <h3 className='h3 mb-8 text-center xl:text-left'>
-                                            {/* My Work Journey */}
-                                        </h3>
-                                        {/* experience items */}
-                                        <div className='grid md:grid-cols-1 gap-y-8'>
-                                            <div className='flex flex-col gap-y-6'>
-                                                {/* list */}
-                                                <div className='flex flex-col gap-y-3'>
-                                                    {getData(qualificationData, 'experience').data.map(
-                                                        (item, index) => {
-                                                            const { company, role, years } = item;
-                                                            return (
-                                                                <div className='flex gap-x-8 group' key={index}>
-                                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
-                                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] 
-                                                                        group-hover:translate-y-[84px] transition-all duration-500'></div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className='font-medium text-lg leading-none mb-2'>
-                                                                            {company}
-                                                                        </div>
-                                                                        <div className='text-base leading-none text-muted-foreground mb-2 space-y-2'>
-                                                                            {role}
-                                                                        </div>
-                                                                        <div className='text-sm font-medium'>
-                                                                            {years}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            );
-                                                        }
-                                                    )}
+                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-black rounded-lg bg-primary text-black p-3 w-[280px]'>Experience</h3>
+                        <div className='grid md:grid-cols-1 gap-y-8'>
+                            <div className='flex flex-col gap-y-6'>
+                                {/* list */}
+                                <div className='flex flex-col gap-y-3'>
+                                    {getData(qualificationData, 'experience').data.map(
+                                        (item, index) => {
+                                            const { company, role, years } = item;
+                                            return (
+                                                <div className='flex gap-x-8 group' key={index}>
+                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] 
+                                                        group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                    </div>
+                                                    <div>
+                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                            {company}
+                                                        </div>
+                                                        <div className='text-base leading-none text-muted-foreground mb-2 space-y-2'>
+                                                            {role}
+                                                        </div>
+                                                        <div className='text-sm font-medium'>
+                                                            {years}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </TabsContent>
-                            </TabsList>
-                        </Tabs>
+                                            );
+                                        }
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
                 </div >
             </div>
         </section >
     );
 };
+
 
 export default About;
 

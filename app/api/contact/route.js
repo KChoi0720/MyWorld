@@ -1,4 +1,4 @@
-"use server"; // ✅ enforce Next.js to execute in Node.js environment
+// "use server"; // ✅ enforce Next.js to execute in Node.js environment
 
 
 import nodemailer from "nodemailer";

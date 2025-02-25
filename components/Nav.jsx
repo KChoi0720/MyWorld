@@ -1,11 +1,8 @@
-
-// link (from next js)
+// Next.js 相关
 import Link from "next/link";
+import { usePathname } from "next/navigation";  // ✅ 直接导入 usePathname
 
-// next hooks
-import pathname from "next/navigation";
-
-// framer motion
+// Framer Motion
 import { motion } from "framer-motion";
 
 const links = [
@@ -14,33 +11,27 @@ const links = [
     { path: '/contact', name: 'contact' }
 ];
 
-
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
-    const path = pathname.usePathname();
+    const path = usePathname();  // ✅ 直接调用 usePathname()
+    
     return (
         <nav className={`${containerStyles}`}>
-            {links.map((link, index) => {
-                return (
-                    <Link
-                        key={index}
-                        href={link.path}
-                        className={`capitalize ${linkStyles}`}
-                    >
-                        {link.path === path && (
-                            <motion.span 
-                                initial={{ y: '-100%'}}
-                                animate={{ y: 0 }}
-                                transition={{ type: 'tween'}}
-                                layoutId='underline'
-                                className={`${underlineStyles}`}
-                            />
-                        )}
-                        {link.name}
-                    </Link>
-                );
-            })}
+            {links.map((link, index) => (
+                <Link key={index} href={link.path} className={`capitalize ${linkStyles}`}>
+                    {link.path === path && (
+                        <motion.span 
+                            initial={{ y: '-100%' }}
+                            animate={{ y: 0 }}
+                            transition={{ type: 'tween' }}
+                            layoutId='underline'
+                            className={`${underlineStyles}`}
+                        />
+                    )}
+                    {link.name}
+                </Link>
+            ))}
         </nav>
     );
 };
 
-export default Nav
+export default Nav;

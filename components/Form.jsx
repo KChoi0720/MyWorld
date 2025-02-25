@@ -46,7 +46,7 @@ const Form = () => {
       </div>
       {/* Email input */}
       <div className='relative flex items-center'>
-        <Input type='email' name='email' placeholder='Email' value={formData.email} onChange={handleChange} required />
+        <Input type='email' name='email' placeholder='Your Email' value={formData.email} onChange={handleChange} required />
         <MailIcon className='absolute right-6' size={20} />
       </div>
       {/* Message textarea */}

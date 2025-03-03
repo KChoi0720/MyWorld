@@ -19,22 +19,20 @@ import react from "react"
 
 const Hero = () => {
     return (
-        <section className="py-12 xl:py-24 min-h-[60vh] sm:min-h-[70vh] xl:pt-14 bg-hero bg-no-repeat 
-  bg-bottom bg-cover dark:bg-none">
+        <section className="py-12 xl:py-24 xl:pt-18\9\8 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
             <div className="container mx-auto">
                 <div className="flex justify-between gap-x-8">
                     {/* text */}
-                    <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0
-            text-center xl:text-left">
-                        <div className="text-1xl uppercase font-semibold mb-4 text-primary tracking-[4px]">Software Engineer</div>
-                        <h1 className="h1">Hello, I'm Jiping Cui.</h1>
+                    <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
+                        {/* <div className="text-1xl uppercase font-semibold mb-4 text-primary tracking-[4px]">Software Engineer</div> */}
+                        <h1 className="h1">Hello, I'm Jiping</h1>
 
-                        <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
+                        <p className=" max-w-[490px] mx-auto xl:mx-0 xl:text-lg py-2 text-primary mb-10">
                             Cloud/Software/AI Engineer, DA/DE, Salesforce Consultant.
                         </p>
 
                         {/* buttons */}
-                        <div className="flex flex-col gap-y-3 md:flex-row gap-x-8 mx-auto xl:mx-0 mb-20">
+                        <div className="flex flex-col gap-y-3 md:flex-row gap-x-8 mx-auto xl:mx-0 mb-16">
                             <Link href='/contact'>
                                 <Button className='gap-x-2'>
                                     Contact me

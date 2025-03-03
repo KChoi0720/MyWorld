@@ -166,7 +166,7 @@ const About = () => {
     };
 
     return (
-        <section className='xl:h-[860px] pb-12 xl:py-24'>
+        <section className='mt-20 xl:h-[860px] pb-12 xl:py-24'>
             <div className='container mx-auto'>
                 <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
                     About me
@@ -196,7 +196,7 @@ const About = () => {
                     {/* Education */}
                     <div className='flex-1'>
                         <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Education</h3>
-                        <div className='w-[300px] grid md:grid-cols-1 gap-y-8'>
+                        <div className='w-[280px] grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
                                 <div className='flex flex-col gap-y-8'>

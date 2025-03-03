@@ -19,7 +19,7 @@ import react from "react"
 
 const Hero = () => {
     return (
-        <section className="py-12 xl:py-24 h-[53vh] xl:pt-14 bg-hero bg-no-repeat 
+        <section className="py-12 xl:py-24 min-h-[60vh] sm:min-h-[70vh] xl:pt-14 bg-hero bg-no-repeat 
   bg-bottom bg-cover dark:bg-none">
             <div className="container mx-auto">
                 <div className="flex justify-between gap-x-8">
@@ -34,7 +34,7 @@ const Hero = () => {
                         </p>
 
                         {/* buttons */}
-                        <div className="flex flex-col gap-y-3 md:flex-row gap-x-8 mx-auto xl:mx-0 mb-12">
+                        <div className="flex flex-col gap-y-3 md:flex-row gap-x-8 mx-auto xl:mx-0 mb-20">
                             <Link href='/contact'>
                                 <Button className='gap-x-2'>
                                     Contact me

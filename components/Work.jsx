@@ -25,6 +25,7 @@ const projectData = [
     link: 'http://www.holzer.com.cn/',
     // github: '/',
   },
+
   {
     image: '/work/powerbi.jpg',
     category: 'Data Analytics',
@@ -63,7 +64,7 @@ const Work = () => {
             </Link>
           </div>
           {/* slider */}
-          <div className='xl:max-w-[1000px] xl:absolute right-0 top-20'>
+          <div className='xl:max-w-[1000px] xl:absolute right-20 top-20'>
             <Swiper
               className='h-[500px]'
               slidesPerView={1}
@@ -79,7 +80,7 @@ const Work = () => {
               {/* show only the first 4 projects for the slides */}
               {projectData.slice(0, 4).map((project, index) => {
                 return (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} >
                     <ProjectCard project={project} />
                   </SwiperSlide>
                 );

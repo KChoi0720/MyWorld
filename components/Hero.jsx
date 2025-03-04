@@ -28,7 +28,7 @@ const Hero = () => {
                         <h1 className="h1">Hello, I'm Jiping</h1>
 
                         <p className=" max-w-[490px] mx-auto xl:mx-0 xl:text-lg py-2 text-primary mb-10">
-                            Cloud/Software/AI Engineer, DA/DE, Salesforce Consultant.
+                            Cloud/Software Engineer, DA/DE, Salesforce.
                         </p>
 
                         {/* buttons */}

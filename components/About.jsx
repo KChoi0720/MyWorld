@@ -69,7 +69,7 @@ const qualificationData = [
             {
                 company: "SAL Technologies - NZ",
                 role: "Data Engineer",
-                years: "Oct.2024 - Jan.2015",
+                years: "Oct.2024 - Jan.2025",
             },
             {
                 company: "GFK - An NIQ Company - NZ",

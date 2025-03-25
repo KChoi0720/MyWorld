@@ -18,7 +18,7 @@ body {
       --card-foreground: 240 19% 16%;
       --popover: 0 0% 100%;
       --popover-foreground: 20 14.3% 4.1%;
-      --primary: 47.9 95.8% 53%;
+      --primary: 45 95.8% 53%;
       --primary-foreground: 26 83.3% 14.1%;
       --secondary: 60 4.8% 95.9%;
       --secondary-foreground: 24 9.8% 10%;
@@ -47,7 +47,7 @@ body {
       --card-foreground: 300 0% 100%;
       --popover: 20 14.3% 4.1%;
       --popover-foreground: 60 9.1% 97.8%;
-      --primary: 47.9 95.8% 53.1%;
+      --primary: 45 95.8% 53.1%;
       --primary-foreground: 26 83.3% 14.1%;
       --secondary: 240 19% 16%;
       --secondary-foreground: 60 9.1% 97.8%;
@@ -84,11 +84,11 @@ body {
 }
 
 .subtitle {
-  @apply text-muted-foreground text-lg mb-8 font-light;
+  @apply text-muted-foreground text-sm mb-6 font-light;
 }
 
 .section-title {
-  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 
+  @apply text-3xl font-bold relative w-max flex items-center justify-between gap-x-1 
   before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center 
   before:w-[24px] before:h-[24px];
 }
@@ -98,4 +98,40 @@ body {
   rounded-[10px] flex items-center gap-x-4;
 }
 
+.marquee-container {
+  max-width: 1100px; /* Default width */
+  width: 90%; /* Adjust width dynamically */
+  overflow: auto;
+  margin: 30 auto; /* Center it */
+  background: #fff;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  padding: 0 15px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

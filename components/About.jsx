@@ -163,9 +163,9 @@ const About = () => {
     const getData = (arr, title) => {
         return arr.find((item) => item.title === title);
     };
-
+    // py-12 xl:py-2 mb-6
     return (
-        <section className='mt-10 xl:h-[860px] pb-12 xl:py-24'>
+        <section className='mt-8 pb-12 xl:py-6'>
             <div className='container mx-auto'>
                 <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
                     About me
@@ -176,8 +176,7 @@ const About = () => {
 
                     {/* Personal Info */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-semibold xl:text-center border border-hidden rounded-2xl bg-primary p-3 w-[280px]'>
-                            Personal Info</h3>
+                        <h3 className='h3 mb-8 text-center font-semibold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Personal Info</h3>
                         <div className='text-center xl:text-left text-sm'>
                             {/* icons */}
                             <div className='grid xl:grid-cols-1 gap-2 mb-12 w-[300px] '>
@@ -206,7 +205,7 @@ const About = () => {
                                             return (
                                                 <div className='flex gap-x-8 group' key={index}>
                                                     <div className='h-[84px] w-[1px] bg-border relative ml-2'>
-                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[64px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
                                                         <div className='text-sm font-medium leading-none mb-1'>
@@ -243,14 +242,14 @@ const About = () => {
                                             const { institue, name, date } = item;
                                             return (
                                                 <div className='flex gap-x-8 group' key={index}>
-                                                    <div className='w-[1px] bg-border relative ml-2'>
-                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[100px] transition-all duration-500'></div>
+                                                    <div className='h-[70px] w-[1px] bg-border relative ml-2'>
+                                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[52px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
                                                         <div className='text-sm font-medium leading-none mb-1'>
                                                             {institue}
                                                         </div>
-                                                        <div className='text-sm leading-none text-muted-foreground mb-1 space-y-0.5 '>
+                                                        <div className='text-sm leading-none text-muted-foreground mb-1 space-y-1 '>
                                                             {name.map((cert, i) => (
                                                                 <div key={i}>{cert}</div>  // each cert occupies one line
                                                             ))}
@@ -274,21 +273,21 @@ const About = () => {
                         <div className='grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
-                                <div className='flex flex-col gap-y-3'>
+                                <div className='flex flex-col gap-y-0'>
                                     {getData(qualificationData, 'experience').data.map(
                                         (item, index) => {
                                             const { company, role, years } = item;
                                             return (
                                                 <div className='flex gap-x-8 group' key={index}>
-                                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                                    <div className='h-[70px] w-[1px] bg-border relative ml-2'>
                                                         <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] 
-                                                        group-hover:translate-y-[84px] transition-all duration-500'></div>
+                                                        group-hover:translate-y-[50px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
                                                         <div className='text-sm font-medium leading-none mb-1'>
                                                             {role}
                                                         </div>
-                                                        <div className='text-sm leading-none text-muted-foreground mb-1 space-y-2'>
+                                                        <div className='text-sm leading-none text-muted-foreground mb-0 space-y-2'>
                                                             {company}
                                                         </div>
                                                         <div className='text-sm '>

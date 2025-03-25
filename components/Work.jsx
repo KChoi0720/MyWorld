@@ -51,11 +51,12 @@ const projectData = [
 
 const Work = () => {
     return (
-      <section className='relative mb-12 xl:mb-48'>
+      // mt-8 pb-12 xl:py-6
+      <section className='relative mb-6 xl:mb-24'>
         <div className='container mx-auto'>
           {/* text */}
           <div className='max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start'>
-            <h2 className='section-title mb-4'>Latest Projects</h2>
+            <h2 className='section-title mb-4'>My Projects</h2>
             <p className='subtitle mb-8'>
               All the projects that I participated and achieved.
             </p>
@@ -64,7 +65,7 @@ const Work = () => {
             </Link>
           </div>
           {/* slider */}
-          <div className='xl:max-w-[1000px] xl:absolute right-20 top-20'>
+          <div className='xl:max-w-[900px] xl:absolute right-60 top-20'>
             <Swiper
               className='h-[500px]'
               slidesPerView={1}

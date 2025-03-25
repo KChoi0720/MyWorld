@@ -1,6 +1,4 @@
-import DevImg from './DevImg';
-import Image from 'next/image';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 
 import {
     User2,
@@ -38,7 +36,7 @@ import {
 const infoData = [
     {
         icon: <User2 size={20} />,
-        text: "Jiping"
+        text: "Jiping Cui"
     },
     {
         icon: <MailIcon size={20} />,
@@ -58,7 +56,7 @@ const infoData = [
     },
     {
         icon: <Calendar size={20} />,
-        text: "  HTML, Tailwind CSS, React.js, TypeScript, JavaScript, Node.js, MongoDB, MySQL, PostgreSQL, Git, GitHub, Docker, Kubernetes, AWS, Azure, Salesforce, Power BI, Tableau, Python, Java."
+        text: "Python, Tailwind CSS, React.js, TypeScript, JavaScript, Node.js, MongoDB, MySQL, PostgreSQL, Git, GitHub, Docker, Kubernetes, AWS, Azure, Salesforce, Power BI."
     },
 ]
 
@@ -67,15 +65,16 @@ const qualificationData = [
         title: "experience",
         data: [
             {
-                company: "SAL Technologies - NZ",
-                role: "Data Engineer",
-                years: "Oct.2024 - Jan.2025",
-            },
-            {
                 company: "GFK - An NIQ Company - NZ",
                 role: "Field Data Interviewer",
                 years: "May.2024 - Present",
             },
+            {
+                company: "SAL Technologies - NZ",
+                role: "Data Engineer",
+                years: "Oct.2024 - Jan.2025",
+            },
+
             {
                 company: "CBS Group - China",
                 role: "Product Analyst",
@@ -166,7 +165,7 @@ const About = () => {
     };
 
     return (
-        <section className='mt-20 xl:h-[860px] pb-12 xl:py-24'>
+        <section className='mt-10 xl:h-[860px] pb-12 xl:py-24'>
             <div className='container mx-auto'>
                 <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
                     About me
@@ -177,10 +176,11 @@ const About = () => {
 
                     {/* Personal Info */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Personal Info</h3>
-                        <div className='text-center xl:text-left '>
+                        <h3 className='h3 mb-8 text-center font-semibold xl:text-center border border-hidden rounded-2xl bg-primary p-3 w-[280px]'>
+                            Personal Info</h3>
+                        <div className='text-center xl:text-left text-sm'>
                             {/* icons */}
-                            <div className='grid xl:grid-cols-1 gap-4 mb-12 w-[300px]'>
+                            <div className='grid xl:grid-cols-1 gap-2 mb-12 w-[300px] '>
                                 {infoData.map((item, index) => {
                                     return (
                                         <div className='flex items-start gap-x-4 mx-auto xl:mx-0' key={index}>
@@ -195,7 +195,7 @@ const About = () => {
 
                     {/* Education */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Education</h3>
+                        <h3 className='h3 mb-8 text-center font-semibold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Education</h3>
                         <div className='w-[280px] grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
@@ -209,16 +209,16 @@ const About = () => {
                                                         <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
-                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                        <div className='text-sm font-medium leading-none mb-1'>
                                                             {university}
                                                         </div>
-                                                        <div className='text-base leading-none text-muted-foreground mb-4'>
+                                                        <div className='text-sm leading-none text-muted-foreground mb-2 '>
                                                             {qualification}
                                                         </div>
-                                                        <div className='text-base font-medium'>
+                                                        <div className='text-sm'>
                                                             {country}
                                                         </div>
-                                                        <div className='text-base font-medium'>
+                                                        <div className='text-sm'>
                                                             {years}
                                                         </div>
                                                     </div>
@@ -233,7 +233,7 @@ const About = () => {
 
                     {/* Certifications */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Certifications</h3>
+                        <h3 className='h3 mb-8 text-center font-semibold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Certifications</h3>
                         <div className='grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
@@ -247,15 +247,15 @@ const About = () => {
                                                         <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[100px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
-                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                        <div className='text-sm font-medium leading-none mb-1'>
                                                             {institue}
                                                         </div>
-                                                        <div className='text-base leading-none text-muted-foreground mb-4 space-y-2 '>
+                                                        <div className='text-sm leading-none text-muted-foreground mb-1 space-y-0.5 '>
                                                             {name.map((cert, i) => (
                                                                 <div key={i}>{cert}</div>  // each cert occupies one line
                                                             ))}
                                                         </div>
-                                                        <div className='text-base font-medium'>
+                                                        <div className='text-sm font-medium'>
                                                             {date}
                                                         </div>
                                                     </div>
@@ -270,7 +270,7 @@ const About = () => {
 
                     {/* Experience */}
                     <div className='flex-1'>
-                        <h3 className='h3 mb-8 text-center font-bold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Experience</h3>
+                        <h3 className='h3 mb-8 text-center font-semibold xl:text-center border border-hidden rounded-2xl bg-primary text-black p-3 w-[280px]'>Experience</h3>
                         <div className='grid md:grid-cols-1 gap-y-8'>
                             <div className='flex flex-col gap-y-6'>
                                 {/* list */}
@@ -285,13 +285,13 @@ const About = () => {
                                                         group-hover:translate-y-[84px] transition-all duration-500'></div>
                                                     </div>
                                                     <div>
-                                                        <div className='font-medium text-lg leading-none mb-2'>
+                                                        <div className='text-sm font-medium leading-none mb-1'>
                                                             {role}
                                                         </div>
-                                                        <div className='text-base leading-none text-muted-foreground mb-2 space-y-2'>
+                                                        <div className='text-sm leading-none text-muted-foreground mb-1 space-y-2'>
                                                             {company}
                                                         </div>
-                                                        <div className='text-sm font-medium'>
+                                                        <div className='text-sm '>
                                                             {years}
                                                         </div>
                                                     </div>

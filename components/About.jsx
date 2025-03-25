@@ -38,7 +38,7 @@ import {
 const infoData = [
     {
         icon: <User2 size={20} />,
-        text: "Kevin"
+        text: "Jiping"
     },
     {
         icon: <MailIcon size={20} />,

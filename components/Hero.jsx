@@ -19,15 +19,14 @@ import react from "react"
 
 const Hero = () => {
     return (
-        <section className="py-12 xl:py-24 xl:pt-18\9\8 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+        <section className="py-12 xl:py-2 xl:pt-18\9\8 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
             <div className="container mx-auto">
                 <div className="flex justify-between gap-x-8">
-                    {/* text */}
                     <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-                        {/* <div className="text-1xl uppercase font-semibold mb-4 text-primary tracking-[4px]">Software Engineer</div> */}
-                        <h1 className="h1">Hello, I'm Jiping</h1>
-
-                        <p className=" max-w-[490px] mx-auto xl:mx-0 xl:text-lg py-2 text-primary mb-10">
+                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif">
+                            Hello, I'm Jiping
+                        </h1>
+                        <p className="max-w-[490px] mx-auto xl:mx-0 xl:text-lg py-2 text-primary mb-10 ">
                             Cloud/Software Engineer, DA/DE, Salesforce.
                         </p>
 
@@ -58,7 +57,7 @@ const Hero = () => {
                     <div className='hidden xl:flex relative'>
                         <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
                         <DevImg
-                            containerStyles=' w-[510px] h-[462px] bg-no-repeat relative bg-bottom'
+                            containerStyles=' w-[400px] h-[360px] bg-no-repeat relative bg-bottom'
                             imgSrc='/images/developer.png'
                         />
                     </div>

@@ -10,10 +10,10 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Welcome to Jiping Space',
+  title: 'About | jiping space',
   description: 'Know me more information.',
 };
-
+ 
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>

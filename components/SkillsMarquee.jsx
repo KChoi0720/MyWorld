@@ -19,7 +19,7 @@ const skillIcons = [
   "/icons/terraform.png",
   "/icons/devops.png",
   "/icons/powerbi.png",
-  "/icons/ETL.png",
+  "/icons/etl.png",
 ];
 
 const SkillsMarquee = () => {

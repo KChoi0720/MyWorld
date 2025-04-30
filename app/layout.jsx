@@ -22,12 +22,11 @@ export default function RootLayout({ children }) {
     <html lang='en' suppressHydrationWarning>
 
       <head>
-        {/* Inject GTM/GA */}
-        <GoogleTagManager gtmId="GTM-PW46WDTW" />
         <GoogleAnalytics gaId="G-8LNVSY1WCC" />
       </head>
 
       <body className={outfit.className}>
+        <GoogleTagManager gtmId="GTM-PW46WDTW" />
         <ThemeProvider attribute='class' defaultTheme='light'>
           <Header />
           {children}

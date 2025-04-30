@@ -16,11 +16,13 @@ export default function Home() {
       <Hero />
       <About />
       <Work />
+
       <button
         onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'xyz' })}
       >
         Send Event
       </button>
+      
     </main>
   );
 }
